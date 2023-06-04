@@ -2,7 +2,9 @@ use std::collections::HashSet;
 
 use serde::{Deserialize, Serialize};
 
-use crate::story_points::model::system::{card::Card, participant::Participant, ticket::Ticket, coffee_vote::CoffeeVote};
+use crate::story_points::model::system::{
+    card::Card, coffee_vote::CoffeeVote, participant::Participant, ticket::Ticket,
+};
 
 #[derive(Debug, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]

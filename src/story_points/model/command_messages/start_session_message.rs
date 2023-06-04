@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 
 use crate::story_points::model::system::card::Card;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct StartSessionMessage {
     session_name: String,

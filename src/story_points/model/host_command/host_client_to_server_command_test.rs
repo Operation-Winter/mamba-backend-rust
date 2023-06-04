@@ -1,9 +1,8 @@
 use std::collections::HashSet;
 
-use crate::{
-    story_points::model::{
-        host_command::host_client_to_server_command::HostClientToServerCommand, system::card::Card, command_messages::start_session_message::StartSessionMessage,
-    },
+use crate::story_points::model::{
+    command_messages::start_session_message::StartSessionMessage,
+    host_command::host_client_to_server_command::HostClientToServerCommand, system::card::Card,
 };
 use uuid::Uuid;
 
@@ -29,7 +28,8 @@ fn test_start_session_serialize() {
 
 #[test]
 fn test_start_session_deserialize() {
-    let parsed_command: Option<HostClientToServerCommand> = serde_json::from_str(START_COMMAND_JSON).ok();
+    let parsed_command: Option<HostClientToServerCommand> =
+        serde_json::from_str(START_COMMAND_JSON).ok();
 
     let start_command = HostClientToServerCommand::StartSession {
         uuid: Uuid::parse_str(&String::from("ca4dfcce-c671-4bbc-b9a8-d8a74a4946c7")).unwrap(),

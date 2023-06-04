@@ -3,7 +3,7 @@ use uuid::Uuid;
 
 use super::card::Card;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct TicketVote {
     participant_id: Uuid,

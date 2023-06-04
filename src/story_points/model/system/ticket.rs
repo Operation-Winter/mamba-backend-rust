@@ -3,7 +3,7 @@ use std::{vec::Vec, collections::HashSet};
 
 use super::ticket_vote::TicketVote;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct Ticket {
     title: String,

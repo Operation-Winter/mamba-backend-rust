@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 
 use crate::story_points::model::system::{card::Card, participant::Participant, ticket::Ticket, coffee_vote::CoffeeVote};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 #[serde(rename_all = "camelCase")]
 pub struct StateMessage {
     session_code: String,

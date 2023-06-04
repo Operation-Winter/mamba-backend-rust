@@ -7,9 +7,9 @@ use crate::story_points::model::system::card::Card;
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct StartSessionMessage {
-    session_name: String,
-    auto_complete_voting: bool,
-    available_cards: Vec<Card>,
-    password: Option<String>,
-    tags: HashSet<String>,
+    pub session_name: String,
+    pub auto_complete_voting: bool,
+    pub available_cards: Vec<Card>,
+    pub password: Option<String>,
+    pub tags: HashSet<String>,
 }
